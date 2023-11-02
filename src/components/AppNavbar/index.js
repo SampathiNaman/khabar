@@ -59,7 +59,7 @@ const AppNavbar = (props) => {
       <Container fluid>
         <Navbar.Brand href="#" className="brand-name">Khabar</Navbar.Brand>
         <div className="d-lg-none">{renderFormComponent()}</div>
-        <Navbar.Toggle aria-controls="navbarScroll" />
+        <Navbar.Toggle aria-controls="navbarScroll"/>
         <Navbar.Collapse id="navbarScroll">
           <Nav
             className="me-auto mx-auto my-2 my-lg-0"

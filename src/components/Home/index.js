@@ -22,7 +22,7 @@ const Home = () => {
 
   const headlinesApi = "https://newsapi.org/v2/top-headlines";
   const newsApi = "https://newsapi.org/v2/everything";
-  const apiKey = 'a9d63fb1bacd4936acbdf09537c049b1';
+  const apiKey = 'b98c99252ca04c4c970d5e616ad55066';
 
   const renderPagination = () => (
     <div className="d-flex justify-content-center">
@@ -51,8 +51,7 @@ const Home = () => {
       const data = await response.json();
       const articles = data.articles.filter(
         (newsItem) => newsItem.title !== "[Removed]"
-      );   
-      await console.log(articles);      
+      );       
       setFetchedHeadlines(articles); 
     }
     else {
@@ -77,7 +76,7 @@ const Home = () => {
       const articles = data.articles.filter(
         (newsItem) => newsItem.title !== "[Removed]"
       );
-      await console.log(articles); 
+      
       setFetchedNews(articles);    
     }
     else {
@@ -115,9 +114,10 @@ const Home = () => {
       <div className="d-flex justify-content-around mx-auto news-cards-container">
         <NewsCards news={fetchedNews.slice((page-1)*10, page*10)} />
       </div>
+      {renderPagination()}
       </>
     )}
-    {renderPagination()}
+
     </>
   )
 

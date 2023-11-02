@@ -1,0 +1,9 @@
+.no-results-img {
+    width: 300px;
+}
+
+@media (min-width: 768px) {
+    .no-results-img {
+    width: 500px;
+    }
+}

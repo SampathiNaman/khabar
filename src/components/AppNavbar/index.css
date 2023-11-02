@@ -1,0 +1,15 @@
+.brand-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: 'sans-serif', 'arial';
+}
+
+.nav-link {
+    color: grey;
+    font-size: 1.0rem;
+    font-weight: 500;
+}
+
+.active, .nav-link:hover, .nav-link:active, .nav-link:focus {
+    color: #000000;
+}

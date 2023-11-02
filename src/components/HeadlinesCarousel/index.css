@@ -1,0 +1,15 @@
+.carousel-img {
+    aspect-ratio: 16/9;
+}
+
+.carousel-control-next,
+.carousel-control-prev, 
+.carousel-indicators  {
+    filter: invert(100%);
+}
+
+.carousel .carousel-indicators button {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}

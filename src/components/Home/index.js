@@ -29,7 +29,7 @@ const Home = () => {
       <button className="btn btn-dark" onClick={() => page>1 && setPage(page - 1)}>
       <FontAwesomeIcon icon={faAnglesLeft} />
       </button>  
-      {[...Array(fetchedNews.length/20)].map((_, i) => (
+      {[...Array(Math.ceil(fetchedNews.length/20))].map((_, i) => (
         <span key={i+1} onClick = {() => setPage(i+1)} className={`${i+1 === page && 'selected-page'} page-no`}>{i+1}</span>
       ))}
       <button className="btn btn-dark" onClick={() => page<fetchedNews.length/20 &&  setPage(page + 1)}>
@@ -46,7 +46,7 @@ const Home = () => {
     } = queryParams;
 
     setLoadingHeadlines(true);
-    const response = await fetch(`${headlinesApi}?category=${category}&language=${language}&pageSize=${pageSize}&apiKey=${apiKey}}`);
+    const response = await fetch(`${headlinesApi}?category=${category}&language=${language}&pageSize=${pageSize}&apiKey=${apiKey}`);
     if (response.ok) {
       const data = await response.json();
       const articles = data.articles.filter(
@@ -70,7 +70,7 @@ const Home = () => {
     } = queryParams;
 
     setLoadingNews(true);
-    const response = await fetch(`${newsApi}?${searchTerm ? `"q=${searchTerm}"&`: ''}sortBy=${filter}&language=${language}&pageSize=${pageSize}&apiKey=${apiKey}}`);
+    const response = await fetch(`${newsApi}?q=${searchTerm ? `"${searchTerm}"` : activeCategory}&sortBy=${filter}&language=${language}&pageSize=${pageSize}&apiKey=${apiKey}`);
     
     if (response.ok) {
       const data = await response.json();

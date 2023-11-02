@@ -35,7 +35,7 @@ const AppNavbar = (props) => {
     <NavDropdown title="Sort By" id="basic-nav-dropdown">
       {
         filters.map((filter) => (
-          <NavDropdown.Item key={filter} value={filter} onClick={e => {setActiveFilter(e.target.value)}} href="#">{filter}</NavDropdown.Item>
+          <NavDropdown.Item key={filter} onClick={() => {setActiveFilter(filter)}} href="#">{filter}</NavDropdown.Item>
         ))
       }
     </NavDropdown>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {Navbar, Nav, NavDropdown, Form, Button, Container} from 'react-bootstrap'
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch, faFilter } from '@fortawesome/free-solid-svg-icons'
 import "./index.css";
@@ -35,7 +36,7 @@ const AppNavbar = (props) => {
     <NavDropdown title="Sort By" id="basic-nav-dropdown">
       {
         filters.map((filter) => (
-          <NavDropdown.Item key={filter} onClick={() => {setActiveFilter(filter)}} href="#">{filter}</NavDropdown.Item>
+          <NavDropdown.Item key={filter} onClick={() => {setActiveFilter(filter)}}>{filter}</NavDropdown.Item>
         ))
       }
     </NavDropdown>
@@ -68,13 +69,14 @@ const AppNavbar = (props) => {
           >
              {
               categories.map((category) => (
-                <Nav.Link
+                <Link
                   key={category}
+                  to={`/${category}`}
                   className={`nav-link ${ activeCategory === category ? "active" : "" }`}
                   onClick={() => setActiveCategory(category)}
                 >
                   {category}
-                </Nav.Link>
+                </Link>
               ))
              }
           </Nav>

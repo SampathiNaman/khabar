@@ -1,7 +1,10 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;@900&display=swap');
+
 .brand-name {
-    font-size: 1.5rem;
+    font-size: 30px !important;
     font-weight: 800;
-    font-family: 'sans-serif', 'arial';
+    font-family: 'Roboto Slab', serif;
 }
 
 .brand-name::first-letter {
@@ -9,11 +12,11 @@
     font-size: larger;
 }
 
-
 .nav-link {
     color: grey;
     font-size: 1.0rem;
     font-weight: 500;
+    font-family: 'Roboto Slab', serif;
     margin-left: auto;
     margin-right: 2rem;
 }

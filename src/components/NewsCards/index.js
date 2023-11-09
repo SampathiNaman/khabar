@@ -8,13 +8,13 @@ const NewsCards = ({news}) => {
     <>
     {news.map((item, index) => (
       <Card style={{ width: '18rem' }} key={index}>
-        <Card.Img variant="top" src={item.urlToImage} />
+        <Card.Img variant="top" src={item.urlToImage} className='news-card-img' />
         <Card.Body>
           <Card.Title>{item.title}</Card.Title>
           <Card.Text>
             {item.description}
           </Card.Text>
-          <Card.Link href={item.url}>Read More</Card.Link>
+          <Card.Link href={item.url} className='read-more'>Read More</Card.Link>
         </Card.Body>
       </Card>
     ))}

@@ -1,0 +1,9 @@
+.news-card-img {
+    border: none;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.read-more {
+    font-size: 12px;
+}

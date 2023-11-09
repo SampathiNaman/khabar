@@ -4,38 +4,3 @@
     margin: auto;
 }
 
-.news-heading {
-    color: #ff0000;
-    font-size: 2.5rem;
-    font-weight: 600;
-    font-family: 'Roboto', sans-serif;
-    font-style: italic;
-    text-decoration: underline;
-    text-align: center;
-    margin: 1rem;
-}
-
-.news-cards-container {
-    width: 90%;
-    gap: 1rem;
-    flex-wrap: wrap;
-    margin: 1.5rem 0;
-}
-
-.page-no {
-    width: 30px;
-    height: 30px;    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-    font-weight: 600;
-    border: 1px solid #373737;
-    margin: 0.5rem;
-}
-
-
-.selected-page {
-    color: #ff0000;
-    border: 2px solid #ff0000;
-}

@@ -24,7 +24,7 @@ const Home = (props) => {
 
   const headlinesApi = "https://newsapi.org/v2/top-headlines";
   const newsApi = "https://newsapi.org/v2/everything";
-  const apiKey = 'b98c99252ca04c4c970d5e616ad55066';
+  const apiKey = 'dc0e564c8ad84280996b78e3acac6dd1';
 
 
 

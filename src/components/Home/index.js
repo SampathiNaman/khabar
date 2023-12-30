@@ -24,11 +24,10 @@ const Home = (props) => {
 
   const headlinesApi = "https://newsapi.org/v2/top-headlines";
   const newsApi = "https://newsapi.org/v2/everything";
-  const apiKey = 'dc0e564c8ad84280996b78e3acac6dd1';
+  const apiKey = '2bbf504b4b1c46ad9615c9c3618c8fb0';
 
 
-
-  const getHedlines = async (queryParams) => {
+  const getHeadlines = async (queryParams) => {
     const {
       category = activeCategory,
       language = "en",
@@ -76,7 +75,7 @@ const Home = (props) => {
   };
   
   useEffect(() => {
-    getHedlines({ category: activeCategory });
+    getHeadlines({ category: activeCategory });
   }, [activeCategory]);
 
   useEffect(() => {
